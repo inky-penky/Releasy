@@ -16,6 +16,29 @@ type LinkItem ={
     link: string;
 }
 
+const links: LinkItem[] = [
+    {
+        text: 'Features',
+        link: '/features'
+    },
+    {
+        text: 'Use Cases',
+        link: '/usecases'
+    },
+    {
+        text: 'Blog',
+        link: '/blog'
+    },
+    {
+        text: 'Pricing',
+        link: '/pricing'
+    },
+    {
+        text: 'Login',
+        link: '/login'
+    }
+];
+
 const Navbar = () => {
 
     const [toggle, setToggle] = useState(false)
@@ -23,32 +46,10 @@ const Navbar = () => {
         setToggle(prevToggle => !prevToggle);
     }
 
-    const links: LinkItem[] = [
-        {
-            text: 'Features',
-            link: '/features'
-        },
-        {
-            text: 'Use Cases',
-            link: '/usecases'
-        },
-        {
-            text: 'Blog',
-            link: '/blog'
-        },
-        {
-            text: 'Pricing',
-            link: '/pricing'
-        },
-        {
-            text: 'Login',
-            link: '/login'
-        }
-    ];
 
     return (
-      <div className='flex justify-between lg:py-10 lg:px-20 items-center p-5'>
-          <div className="w-[5rem] lg:w-[20rem]">
+      <div className='flex justify-between lg:py-8 lg:px-20 items-center p-5'>
+          <div className="w-[5rem] lg:w-[7rem]">
             <Link href="/">
                 <Image src={Logo} alt="logo" />
             </Link>
